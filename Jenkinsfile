@@ -26,6 +26,9 @@ pipeline{
             }
         }
         stage('4-clossing'){
+            when{
+                branch 'side'
+            }
             steps{
                 echo "we are done "
             }
