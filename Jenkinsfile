@@ -10,10 +10,10 @@ pipeline{
         }
         stage('2-parallel-jobs'){
             parallel{
-                agent{
-                    label 'slave2'
-                }
                 stage('1-subjob1'){
+                    agent{
+                        label 'slave2'
+                    }
                     steps{
                         sh 'lscpu'
                     }
